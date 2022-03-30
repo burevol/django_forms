@@ -1,0 +1,9 @@
+{% extends 'form1/default.html' %}
+
+{% block content %}
+<ul>
+    {% for category in object_list %}
+        <li><a href="{% url 'question' category.pk%}">{{ category.cat }}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}
